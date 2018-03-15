@@ -4,11 +4,10 @@ import time
 import threading
 
 start_time = time.time()
-# "icc --version",
-# "icc",
-COMMANDs = ["dmidecode --type 4", "uname -a", "cat /etc/*rele*", "gcc --version", "mpirun -V", "nvidia-smi",
-            "nvcc -V", 'dmidecode --type 17 | grep "Size"', "fdisk -l"]
-KEYWORDs = ["Version:", " ", "PRETTY_NAME", "gcc", "MPI", "Driver Version", "release", "B", "Disk /dev/"]
+
+COMMANDs = ["dmidecode --type 4", "uname -a", "cat /etc/*rele*", "gcc --version", "icc --version", "mpirun -V",
+            "nvidia-smi", "nvcc -V", 'dmidecode --type 17 | grep "Size"', "fdisk -l"]
+KEYWORDs = ["Version:", " ", "PRETTY_NAME", "gcc", "icc", "MPI", "Driver Version", "release", "B", "Disk /dev/"]
 
 
 def command_pars(command, file_out):
