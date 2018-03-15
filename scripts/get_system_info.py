@@ -34,6 +34,7 @@ print("Finished")
 
 for i in range(len(COMMANDs)):
     read_file(str(i), KEYWORDs[i])
+    os.remove(str(i))
 
 res_time = time.time() - start_time
 print("отработало за {} секунд!".format(res_time))
